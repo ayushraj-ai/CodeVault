@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 public class Sum_Naturalnumber {
     public static void main(String[] args) {
         Scanner ay = new Scanner(System.in);
