@@ -1,4 +1,3 @@
-package DSA;
 import java.util.*;
 
 public class to_upppercase {

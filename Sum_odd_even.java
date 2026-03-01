@@ -1,4 +1,3 @@
-package DSA;
 import java.util.*;
 
 public class Sum_odd_even {

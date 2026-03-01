@@ -1,4 +1,3 @@
-package DSA;
 import java.util.*;
 
 public class Tax_Calculator {

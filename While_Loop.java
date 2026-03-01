@@ -1,4 +1,4 @@
-package DSA;
+
 import java.util.*;
 
 public class While_Loop {
