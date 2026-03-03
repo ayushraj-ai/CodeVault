@@ -12,15 +12,19 @@ public class StudentGrade {
         double percentage;
         String grade;
 
-        // Input marks for each subject
+        // Input marks for each subject.
         System.out.print("Enter marks for Physics: ");
         physics = input.nextInt();
+        
         System.out.print("Enter marks for Chemistry: ");
         chemistry = input.nextInt();
+
         System.out.print("Enter marks for Biology: ");
         biology = input.nextInt();
+
         System.out.print("Enter marks for Mathematics: ");
         mathematics = input.nextInt();
+
         System.out.print("Enter marks for Computer: ");
         computer = input.nextInt();
 
