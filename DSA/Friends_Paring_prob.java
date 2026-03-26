@@ -17,6 +17,8 @@ public class Friends_Paring_prob {
         int n = sc.nextInt();
 
         System.out.println(pairing(n));
-        }
+            sc.close();
+    }
+        
     }
 }

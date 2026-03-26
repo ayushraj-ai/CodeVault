@@ -31,6 +31,7 @@ public class firstocurance {
             int key = ac.nextInt();
 
             System.out.println(occursnce(arr , key , 0));
+            ac.close();
         }
     }
     

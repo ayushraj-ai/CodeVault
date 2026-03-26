@@ -27,7 +27,7 @@ public class Xtopown {
 
         System.out.println(a +" power " + n + " = " + obtimized(a, n));
 
-            
+            sc.close();
         }
     }
 }

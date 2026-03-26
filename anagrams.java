@@ -32,5 +32,6 @@ public class anagrams {
         String str1 = ay.nextLine();
 
         anagrams(str , str1);
+        ay.close();
     }
 }

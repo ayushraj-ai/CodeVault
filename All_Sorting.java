@@ -103,5 +103,6 @@ public class All_Sorting {
                         System.out.println("Invalid choice");
                 }
             }while(choice != 4);
+        ay.close();
     }
 }
