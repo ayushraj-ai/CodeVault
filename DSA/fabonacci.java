@@ -19,6 +19,7 @@ public class fabonacci {
             for (int i = 0; i <= z; i++) {
                  System.out.println(fibo(i) + " ");
             }
+            ay.close();
         }
     }
     
