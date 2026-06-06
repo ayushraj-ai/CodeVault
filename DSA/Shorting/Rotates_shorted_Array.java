@@ -29,22 +29,22 @@ public class Rotates_shorted_Array {
         }
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter number of index: ");
+            int index = sc.nextInt();
 
-        System.out.print("Enter number of index: ");
-        int index = sc.nextInt();
+            int[] arr = new int[index];
 
-        int[] arr = new int[index];
+            for (int i = 0; i < arr.length; i++) {
+                System.out.print("Enter number at index " + i + ": ");
+                arr[i] = sc.nextInt();
+            }
 
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print("Enter number at index " + i + ": ");
-            arr[i] = sc.nextInt();
+            System.out.print("Enter target: ");
+            int tar = sc.nextInt();
+
+            System.out.print(search(arr, tar, 0, arr.length - 1));
         }
-
-        System.out.print("Enter target: ");
-        int tar = sc.nextInt();
-
-        System.out.print(search(arr, tar, 0, arr.length -1));
     }
     
 }

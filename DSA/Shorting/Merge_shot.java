@@ -65,23 +65,22 @@ public class Merge_shot {
     }
 
     public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter number of index: ");
+            int index = sc.nextInt();
 
-        Scanner sc = new Scanner(System.in);
+            int[] arr = new int[index];
 
-        System.out.print("Enter number of index: ");
-        int index = sc.nextInt();
+            for (int i = 0; i < arr.length; i++) {
+                System.out.print("Enter number at index " + i + ": ");
+                arr[i] = sc.nextInt();
+            }
 
-        int[] arr = new int[index];
+            // Call Merge Sort
+            mergeshot(arr, 0, arr.length - 1);
 
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print("Enter number at index " + i + ": ");
-            arr[i] = sc.nextInt();
+            System.out.print("Sorted Array: ");
+            printarr(arr);
         }
-
-        // Call Merge Sort
-        mergeshot(arr, 0, arr.length - 1);
-
-        System.out.print("Sorted Array: ");
-        printarr(arr);
     }
 }

@@ -10,9 +10,10 @@ public class increasing_order {
        System.out.print(n + " ");
     }
     public static void main(String[] args) {
-        Scanner ay = new Scanner(System.in);
-        System.out.print("Enter number: ");
-        int a = ay.nextInt();
-        inc_num(a);
+        try (Scanner ay = new Scanner(System.in)) {
+            System.out.print("Enter number: ");
+            int a = ay.nextInt();
+            inc_num(a);
+        }
     }
 }

@@ -11,11 +11,12 @@ public class s_o_n_natural {
         return n + sofn_natural(n - 1);
     }
     public static void main(String[] args) {
-        Scanner ay = new Scanner(System.in);
-        while (true) { 
-            System.out.print("enter number: ");
-            int x = ay.nextInt();
-            System.out.println(sofn_natural(x));
+        try (Scanner ay = new Scanner(System.in)) {
+            while (true) {
+                System.out.print("enter number: ");
+                int x = ay.nextInt();
+                System.out.println(sofn_natural(x));
+            }
         }
     }
 }

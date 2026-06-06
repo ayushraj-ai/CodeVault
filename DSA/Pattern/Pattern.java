@@ -79,17 +79,16 @@ public class Pattern {
     }
 
     public static void main(String[] args) {
-        Scanner ay = new Scanner(System.in);
+        try (Scanner ay = new Scanner(System.in)) {
+            System.out.print("Ente n: ");
+            int n = ay.nextInt();
 
-        System.out.print("Ente n: ");
-        int n = ay.nextInt();
-
-        printsquare(n);
-        hollostar(n);
-        printstar(n);
-        printinverserighttriangle(n);
-        lefttriangle(n);
-    
+            printsquare(n);
+            hollostar(n);
+            printstar(n);
+            printinverserighttriangle(n);
+            lefttriangle(n);
+        }
     }
     
 }

@@ -24,13 +24,11 @@ public class Duplicate_String {
     }
 
     public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter string name: ");
+            String str = sc.nextLine();
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter string name: ");
-        String str = sc.nextLine();
-
-        rmoveduplicate(str, 0, new StringBuilder(""),
-                        new boolean[26]);
+            rmoveduplicate(str, 0, new StringBuilder(""), new boolean[26]);
+        }
     }
 }

@@ -17,21 +17,20 @@ public class sortedarry {
     // time complixicty O(n)
     // space complixity O(n)
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            while (true) {
+                System.out.print("Enter array length: ");
+                int a = sc.nextInt();
 
-        while(true){
-            
-        System.out.print("Enter array length: ");
-        int a = sc.nextInt();
+                int[] arr = new int[a];
 
-        int[] arr = new int[a];
-
-        for(int i = 0 ; i < a ; i++ ){
-            System.out.print("Enter number: ");
-            arr[i] = sc.nextInt();
+                for (int i = 0; i < a; i++) {
+                    System.out.print("Enter number: ");
+                    arr[i] = sc.nextInt();
+                }
+                System.out.println(isshorted(arr, 0));
+            }
         }
-        System.out.println(isshorted(arr , 0));
-    }
 
     }
 }

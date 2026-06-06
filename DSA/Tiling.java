@@ -14,14 +14,13 @@ public class Tiling {
         return totaways;
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            while (true) {
+                System.out.print("Enter size of floor: ");
+                int a = sc.nextInt();
 
-        while (true) {
-            
-        System.out.print("Enter size of floor: ");
-        int a = sc.nextInt();
-
-        System.out.println(tilingproblem(a));
+                System.out.println(tilingproblem(a));
+            }
         }
     }
     
