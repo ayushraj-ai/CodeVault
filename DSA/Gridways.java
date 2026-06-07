@@ -12,12 +12,11 @@ public class Gridways {
         return w1+w2;
     }
     public static void main(String[] args) {
-        try (Scanner sc = new Scanner(System.in)) {
-            System.out.print("Enter Rows: ");
-            int n = sc.nextInt();
-            System.out.print("Enter Column: ");
-            int m = sc.nextInt();
-            System.out.println(gridWays(0,0,n,m));
-        }
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter Rows: ");
+        int n = sc.nextInt();
+        System.out.print("Enter Column: ");
+        int m = sc.nextInt();
+        System.out.println(gridWays(0,0,n,m));
     }
 }
