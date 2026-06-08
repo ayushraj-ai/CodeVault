@@ -13,7 +13,7 @@ public class SortingArrylist {
 
         // for ascending order
         Collections.sort(list); //inbuilt function
-        System.out.println("in Scending order: "+ list);
+        System.out.println("in ascending order: "+ list);
 
         //for decending order
         Collections.sort(list , Collections.reverseOrder());  //optimized function  * Collections.reverseOrder() is a comparitor to define function logic

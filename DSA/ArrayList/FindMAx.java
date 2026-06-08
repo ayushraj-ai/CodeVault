@@ -11,8 +11,8 @@ public class FindMAx {
         list.add(3);
         list.add(5);
         list.add(10);
-        list.add(1 , 20); //it take o(n) time
         System.out.println("Arrays are: " + list);
+        list.add(1 , 20); //it take o(n) time
 
          for(int i = 0 ; i <list.size() ; i++){
             System.out.print(list.get(i));

@@ -38,8 +38,6 @@ public class Implimenation {
             System.out.print(list.get(i));
             System.out.print(" ");
         } 
-        
-
     }
 }
 
