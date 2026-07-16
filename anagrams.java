@@ -33,5 +33,6 @@ public class anagrams {
 
         anagrams(str , str1);
         ay.close();
+        
     }
 }
