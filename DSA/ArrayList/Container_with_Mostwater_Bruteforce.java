@@ -7,7 +7,7 @@ public class Container_with_Mostwater_Bruteforce {
     public static int storewater(ArrayList<Integer> height){
         int maxwater = 0;
         for(int i = 0 ; i< height.size() ; i++){    //for L1
-            for(int j = 0 ; j < height.size() ; j++){   //for L2
+            for(int j = i + 1 ; j < height.size() ; j++){   //for L2
                 int ht = Math.min(height.get(i) , height.get(j));
                 int weidth = j - i;
                 int currentwatter = ht * weidth;
