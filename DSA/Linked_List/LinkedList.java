@@ -1,79 +1,131 @@
 package Linked_List;
 
 public class LinkedList {
-    public static class Node{
+
+    public static class Node {
         int data;
         Node next;
 
-        public Node(int data){
+        public Node(int data) {
             this.data = data;
             this.next = null;
         }
     }
 
-    public static Node head;
-    public static Node tail;
+    private Node head;
+    private Node tail;
+    private int size;
 
-    public void addFirst(int data){
-        //create a new node
+    public void addFirst(int data) {
         Node newNode = new Node(data);
 
-        if(head == null){
+        if (head == null) {
             head = tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+
+        size++;
+    }
+
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+
+        size++;
+    }
+
+    public void addMiddle(int index, int data) {
+        if (index < 0 || index > size) {
+            System.out.println("Invalid index");
             return;
         }
 
-        //Step 2
-        newNode.next = head;
-
-        //Step 3
-        head = newNode;
-    }
-
-    public void addLast(int data){
-        //Step 1  create node
-        Node newNode = new Node(data);
-        if(head == null){
-            head = tail = newNode;
-            return;
-        }
-
-        //Step 2
-        tail.next = newNode;
-
-        //step 3
-
-        tail = newNode;
-
-    }
-
-    public void addMiddle(int index , int data){
-        Node newNode = new Node(data);
-        if(index == 0){
+        if (index == 0) {
             addFirst(data);
             return;
         }
+
+        if (index == size) {
+            addLast(data);
+            return;
+        }
+
+        Node newNode = new Node(data);
         Node temp = head;
-        int i = 0;
-        while(i < index - 1){
+
+        for (int i = 0; i < index - 1; i++) {
             temp = temp.next;
-            i++;
         }
 
         newNode.next = temp.next;
         temp.next = newNode;
+        size++;
     }
 
-    public void print(){
-        if(head == null){
+    public int rmhead() {
+        if (head == null) {
+            System.out.println("LL is empty");
+            return Integer.MIN_VALUE;
+        }
+
+        int value = head.data;
+        head = head.next;
+        size--;
+
+        if (size == 0) {
+            tail = null;
+        }
+
+        return value;
+    }
+
+    public int rmtail() {
+    if (size == 0) {
+        return Integer.MIN_VALUE;
+    }
+
+    if (size == 1) {
+        int value = head.data;
+        head = tail = null;
+        size = 0;
+        return value;
+    }
+
+    Node prev = head;
+
+    for (int i = 0; i < size - 2; i++) {
+        prev = prev.next;
+    }
+
+    int value = tail.data;
+    prev.next = null;
+    tail = prev;
+    size--;
+
+    return value;
+}
+
+    public void print() {
+        if (head == null) {
             System.out.println("LL is empty");
             return;
         }
+
         Node temp = head;
-        while(temp != null){
+
+        while (temp != null) {
             System.out.print(temp.data + " -> ");
             temp = temp.next;
         }
+
         System.out.println("null");
     }
     public static void main(String[] args) {
@@ -92,6 +144,11 @@ public class LinkedList {
         ll.addLast(6);
         ll.print();
         ll.addMiddle(2,9 );
+        ll.print();
+
+        ll.rmhead();
+        ll.print();
+        ll.rmtail();
         ll.print();
     }
 }
